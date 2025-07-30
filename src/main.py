@@ -18,6 +18,8 @@ CORS(app)
 app.register_blueprint(user_bp, url_prefix='/api')
 app.register_blueprint(chatbot_bp, url_prefix='/api')
 
+# Ensure the database directory exists before initializing SQLAlchemy
+os.makedirs(os.path.join(os.path.dirname(__file__), 'database'), exist_ok=True)
 # uncomment if you need to use database
 app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{os.path.join(os.path.dirname(__file__), 'database', 'app.db')}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
