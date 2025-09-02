@@ -13,7 +13,7 @@ chatbot_bp = Blueprint('chatbot', __name__)
 # Initialize Groq client
 client = OpenAI(
     api_key=os.getenv("GROQ_API_KEY2", "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"),
-    base_url="https://api.groq.com/openai/v1"
+    base_url="deepseek-r1-distill-llama-70b"
 )
 
 def integrate_your_chatbot(user_message):
