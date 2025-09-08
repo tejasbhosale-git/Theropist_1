@@ -12,7 +12,7 @@ chatbot_bp = Blueprint('chatbot', __name__)
 
 # Initialize Groq client
 client = OpenAI(
-    api_key=os.getenv("GROQ_API_KEY2", "GROQ_API_KEY2=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"),
+    api_key=os.getenv(("GROQ_API_KEY", "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")),
     base_url="openai/gpt-oss-20b"
 )
 
