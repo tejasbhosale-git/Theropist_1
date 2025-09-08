@@ -1,5 +1,6 @@
 # MindSpace - AI Therapy Chatbot Website
-
+Available at - 
+https://theropist-1.onrender.com/ , 
 A beautiful, responsive web application for hosting your AI therapy chatbot with a ChatGPT-like interface designed specifically for therapy sessions. **Now integrated with your Groq-powered funny and supportive therapy chatbot!**
 
 ## Features

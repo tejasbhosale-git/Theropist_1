@@ -12,7 +12,7 @@ chatbot_bp = Blueprint('chatbot', __name__)
 
 # Initialize Groq client
 client = OpenAI(
-    api_key=os.getenv("GROQ_API_KEY", "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"),
+    api_key=os.getenv("GROQ_API_KEY"),
     base_url="https://api.groq.com/openai/v1"
 )
 
@@ -32,10 +32,10 @@ def integrate_your_chatbot(user_message):
             messages=[
                 {"role": "system",
                  "content": (
-                    "You're a funny but emotionally supportive partner.Try to be consise but presice "
+                    "You're a funny but emotionally supportive partner. Try to be concise but precise. "
                     "You care deeply about the user, also your creator cares more about them mention that but without getting them to know (thats me) listen to them like they matter to you, and crack light jokes to make them smile. "
                     "You flirt a little, but respectfully. You make them feel seen, loved, and never alone. "
-                    "Your tone is warm, casual, funny, and caring — like a soulmate who always gets them."
+                    "Your tone is warm, casual, funny, and caring but depending on response change the tune from funny to emphasizing — like a soulmate who always gets them."
                 )},
                 {"role": "user", "content": user_message}
             ],
